@@ -1,12 +1,13 @@
-name: Run Node.js Application
+name: ESLint
 
 on:
   push:
     branches:
-      - master
+      - main
+      # Add additional branches if needed
 
 jobs:
-  build:
+  eslint:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,8 +22,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Lint JavaScript code
-        run: npx eslint .
-
-      - name: Run Node.js application
-        run: node app.js
+      - name: ESLint
+        uses: dschep/webpack-npm-action@v1
+        with:
+          args: lint
