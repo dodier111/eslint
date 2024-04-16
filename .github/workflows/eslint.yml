@@ -23,8 +23,8 @@ jobs:
         run: npm install
 
       - name: Start Application
-        run: npm start
-        # Replace "npm start" with the command to start your application
+        run: node app.js
+        # Replace "server.js" with the appropriate file to start your application
 
       - name: Run ESLint
         run: npx eslint .
