@@ -1,4 +1,5 @@
-name: Run Application and Lint
+
+    name: Run Application and Lint
 
 on:
   push:
