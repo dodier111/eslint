@@ -23,6 +23,4 @@ jobs:
         run: npm install
 
       - name: ESLint
-        uses: dschep/webpack-npm-action@v1
-        with:
-          args: lint
+        run: npm run lint
