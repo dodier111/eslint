@@ -1,13 +1,13 @@
-name: ESLint
+name: Build and Lint
 
 on:
   push:
     branches:
-      - master
+      - main
       # Add additional branches if needed
 
 jobs:
-  eslint:
+  build-and-lint:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,5 +22,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: ESLint
-        run: npm run lint
+      - name: Build Application
+        run: npm run build
+        # Replace "npm run build" with the command to start your application
+
+      - name: Run ESLint
+        run: npx eslint .
